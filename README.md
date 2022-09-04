@@ -41,8 +41,7 @@ You need to install needed packages before running/building app.
 ```
 
 
-Running Application
-
+### Running Application
 
 Run the project file with npm
 
@@ -50,15 +49,14 @@ Run the project file with npm
   npm start
 ```
 
-Building Application as .exe
-
+### Building Application as .exe
 
 Run the script with with npm
 ```bash
   npm run buildwin
 ```
 
-Building Application as setup file (Windows)
+### Building Application as setup file (Windows)
 ```bash
   npm run build-installer
 ```
