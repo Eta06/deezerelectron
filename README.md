@@ -32,7 +32,17 @@ Go to the project directory
 ```bash
   cd deezerelectron
 ```
+
+
+You need to install needed packages before running/building app.
+
+```bash
+  npm i
+```
+
+
 Running Application
+
 
 Run the project file with npm
 
@@ -41,6 +51,7 @@ Run the project file with npm
 ```
 
 Building Application as .exe
+
 
 Run the script with with npm
 ```bash
