@@ -7,8 +7,8 @@ Electron based Unofficial Deezer Application
 ## Github Project Stats
 
 [![ISSUES](https://img.shields.io/github/issues/Eta06/deezerelectron)](https://github.com/Eta06/XNotepad/blob/main/LICENSE.md) [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/Eta06/deezerelectron/blob/main/LICENSE.md)
+[![CircleCI](https://img.shields.io/circleci/build/gh/Eta06/deezerelectron/main)](https://circleci.com/gh/Eta06/deezerelectron/tree/main)
 
-<img src="https://circleci.com/gh/Eta06/deezerelectron.png?branch=dev>
 
 
   
