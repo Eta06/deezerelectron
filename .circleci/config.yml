@@ -1,23 +1,14 @@
-version: 2.1
-executors:
-  my-custom-executor:
-      docker:
-            - image: cimg/base:stable
-                    auth:
-                              # ensure you have first added these secrets
-                                        # visit app.circleci.com/settings/project/github/Eta06/deezerelectron/environment-variables
-                                                  username: $DOCKER_HUB_USER
-                                                            password: $DOCKER_HUB_PASSWORD
-                                                            jobs:
-                                                              run:
+orbs:
+    node: circleci/node@5.0.3
 
-                                                                  executor: my-custom-executor
-                                                                      steps:
-                                                                            - checkout
-                                                                                  - run: |
-                                                                                            # npm install
-
-                                                                                            workflows:
-                                                                                              my-custom-workflow:
-                                                                                                  jobs:
-                                                                                                        - run
+jobs:
+    example-job:
+        docker:
+              # replace with your preferred image
+                    - image: cimg/base:stable
+                        steps:
+                              - node/install
+                              workflows:
+                                example-workflow:
+                                    jobs:
+                                          - example-job
