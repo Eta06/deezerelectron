@@ -1,14 +1,14 @@
 orbs:
-    node: circleci/node@5.0.3
+  node: circleci/node@5.0.3
 
 jobs:
-    example-job:
-        docker:
-              # replace with your preferred image
-                    - image: cimg/base:stable
-                        steps:
-                              - node/install
-                              workflows:
-                                example-workflow:
-                                    jobs:
-                                          - example-job
+  example-job:
+    docker:
+      # replace with your preferred image
+      - image: cimg/base:stable
+    steps:
+      - node/install
+workflows:
+  example-workflow:
+    jobs:
+     - example-job
