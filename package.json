@@ -41,11 +41,11 @@
     "homepage": "https://github.com/Eta06/deezerelectron#readme",
     "devDependencies": {
         "typescript": "^5.2.2",
-        "electron": "^27.0.4"
+        "electron": "^27.0.4",
+        "electron-builder": "^24.6.4"
     },
     "dependencies": {
         "@electron/remote": "^2.1.0",
-        "electron-builder": "^24.6.4",
         "electron-packager": "^17.1.2"
     }
 }
