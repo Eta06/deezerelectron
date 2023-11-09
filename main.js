@@ -1,4 +1,6 @@
 // noinspection JSIgnoredPromiseFromCall
+// noinspection JSIgnoredPromiseFromCall
+
 const { app, BrowserWindow } = require('electron');
 
 app.disableHardwareAcceleration()
