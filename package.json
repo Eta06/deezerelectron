@@ -1,0 +1,51 @@
+{
+    "name": "deezerelectron",
+    "version": "1.1.0",
+    "description": "Electron based Unofficial Deezer Application",
+    "main": "main.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Eta06/deezerelectron.git"
+    },
+    "scripts": {
+        "start": "electron ../../../Masaüstü",
+        "electron-trace": "electron --trace-warnings ../../../Masaüstü",
+        "buildwin": "electron-packager --out dist/ --overwrite --platform win32 --appname DeezerElectron . --icon icon.ico",
+        "build-installer": "electron-builder"
+    },
+    "build": {
+        "appId": "DeezerElectron.Eta06",
+        "win": {
+            "target": [
+                "nsis"
+            ],
+            "icon": "./installer-icon.ico"
+        },
+        "nsis": {
+            "installerIcon": "./installer-icon.ico",
+            "uninstallerIcon": "./installer-icon.ico",
+            "uninstallDisplayName": "Deezer Electron",
+            "oneClick": "false",
+            "allowToChangeInstallationDirectory": true
+        }
+    },
+    "keywords": [
+        "Electron",
+        "Deezer"
+    ],
+    "author": "Emir Tunahan Alim",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Eta06/deezerelectron/issues"
+    },
+    "homepage": "https://github.com/Eta06/deezerelectron#readme",
+    "devDependencies": {
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "@electron/remote": "^2.1.0",
+        "electron": "^27.0.4",
+        "electron-builder": "^24.6.4",
+        "electron-packager": "^17.1.2"
+    }
+}
