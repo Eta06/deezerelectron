@@ -1,33 +1,28 @@
+// noinspection JSIgnoredPromiseFromCall
+const { app, BrowserWindow } = require('electron');
 
-const { app, BrowserWindow, electron } = require('electron')
-
-const path = require('path');
-const client = require('discord-rich-presence')('1014256106173906944');
 app.disableHardwareAcceleration()
-var os = require('os');
-var win = null;
-var splash= null;
-var notsplash = false;
-
-
+let notsplash = false;
 
 const createWindow = () => {
-  
+
     const win = new BrowserWindow({
-      width: 1000,
+        titleBarStyle: 'hidden',
+        trafficLightPosition: { x: 10, y: 10 },
+      width: 1120,
       height: 610,
       minHeight: 600,
       minWidth: 800,
       show: false,
       webPreferences:{nodeIntegration:true},
       icon: __dirname + "/icon.png",
-      opacity: 0.97,
+      opacity: 0.98,
     })
-    var splash = new BrowserWindow({ 
-      width: 800, 
-      height: 600, 
-      transparent: true, 
-      frame: false, 
+    let splash = new BrowserWindow({
+      width: 800,
+      height: 600,
+      transparent: true,
+      frame: false,
       alwaysOnTop: true,
       show: true,
       icon: __dirname + "/icon.png",
@@ -38,40 +33,23 @@ const createWindow = () => {
     splash.center();
     win.removeMenu()
     win.loadURL('https://deezer.com/',
-    {userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'});
-    if (notsplash == true){
+        {userAgent: 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36 Ubuntu/22.04'});
+    if (notsplash){
       console.log('Not executed');
     }else {
     win.webContents.on('did-finish-load', function() {
         splash.hide()
 	      win.show();
-        var notsplash = true;
-      
-  });  
+        notsplash = true;
+
+  });
   win.on('close', function() {
     app.quit();
   })
-  
-}
 
 }
-
-
-
-
-client.updatePresence({
-  state: 'Deezer Electron',
-  details: 'Listening on',
-  startTimestamp: Date.now(),
-  largeImageKey: 'icon',
-  smallImageKey: 'icon',
-  instance: true,
-});
-
-
-
+}
 
 app.whenReady().then(() => {
-
 createWindow()
 })
