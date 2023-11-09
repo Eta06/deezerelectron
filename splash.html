@@ -1,12 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+      <style>
+          @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+          }
+          .video-player{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              animation: fadeIn 1s;
+              border-radius: 20px;
+          }
+      </style>
+      <title>Deezer Electron - Splash Screen</title>
   </head>
   <body scroll="no" style="overflow: hidden">
-    <center>
-        <video width="512" height="512" autoplay="true">
+    <div style="text-align: center;">
+        <video width="512" height="512" class="video-player" autoplay="true">
             <source src="splash.mp4" type="video/webm"/>
         </video>
-    </center>
+    </div>
   </body>
 </html>
